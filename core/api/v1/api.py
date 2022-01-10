@@ -16,7 +16,7 @@ class UserResource(Resource):
 
 class HEventResource(Resource):
     def get(self):
-        return {'hello':'world'}
+        return {'hello':'world'}, 200, {'Access-Control-Allow-Methods': '*'}
     def post(self):
         return {'hello':'world'}
     def put(self):
