@@ -1,5 +1,5 @@
 import os
-from core.models.db_models import *
+from core.models import *
 from core.constants import DB_NAME
 
 def create_database():
