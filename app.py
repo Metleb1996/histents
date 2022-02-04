@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from core import constants
 from core.api.v1 import apiv1 as api_v1
 from core.models import app
