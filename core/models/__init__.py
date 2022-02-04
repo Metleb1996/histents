@@ -7,7 +7,7 @@ from core.constants import DB_NAME
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///{}'.format(os.path.join(os.path.dirname(__file__), '{}'.format(DB_NAME)))
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_URI', 'sqlite:///{}'.format(os.path.join(os.path.dirname(__file__), '{}'.format(DB_NAME))))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)
